@@ -17,7 +17,13 @@ is_rectangle(10, 4, 5) -> False
 
 
 def is_triangle(side1: int, side2: int, side3: int) -> bool:
-    result = None
+    # result = None
+    if side1 < (side2 + side3) \
+            and side2 < (side1 + side3) \
+            and side3 < (side2 + side1):
+        result = True
+    else:
+        result = False
     return result
 
 

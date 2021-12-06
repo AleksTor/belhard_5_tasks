@@ -13,6 +13,7 @@ lets_break(-5) -> 15
 lets_break(5) -> 5
 lets_break(20) -> ValueError
 """
+# import counter as counter
 
 
 def lets_break(n: int) -> int:
@@ -32,7 +33,11 @@ def lets_break(n: int) -> int:
     counter = 0
     while True:
         # TODO тут написать код
-        pass
+        for i in range(current_value, 10):
+            print(current_value, counter)
+            counter += 1
+
+        break
     return counter
 
 

@@ -13,8 +13,14 @@ square_or_rectangle(4, 4) -> 16
 
 
 def square_or_rectangle(side1: int, side2: int) -> int:
-    result = None
-    return result
+    if side1 == side2:
+        result = side1 * side2
+        return result
+    if side1 > side2 or side2 > side1:
+        result = 2 * (side1 + side2)
+        return result
+    # result = None
+    # return result
 
 
 if __name__ == '__main__':
