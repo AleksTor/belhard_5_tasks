@@ -13,18 +13,27 @@ TypeError с сообщением "Все элементы списка долж
 
 
 def odd_sum(int_list: list) -> int:
-    summa = 0
     # TODO написать свой код здесь
-    return summa
+    num = 0
+    for i in int_list:
+        if isinstance(i, int):  # ф-ция специально создана для проверки принадлежности к опред. кл.
+            if i % 2 == 1:  # остаток должен быть нечетным, чтобы получить нечетные числа по условию
+                num = num + i
+        else:
+            raise TypeError("Все элементы списка должны быть целыми числами")
+    return num
 
 
 if __name__ == '__main__':
-    some_list = [1, 2, 3, '123']
+    some_list = [1, 2, 3]
     try:
         odd_sum(some_list)
     except TypeError as exc:
         print(exc)
-        print("Все элементы списка должны быть целыми числами")
     except ValueError as exc:
         print(exc)
-        print("Все элементы списка должны быть целыми числами")
+        print("Все элементы списка должны быть целыми ")
+    else:
+        print(f"Ваш ответ: {odd_sum(some_list)}")
+    finally:
+        print("Обработка завершена")

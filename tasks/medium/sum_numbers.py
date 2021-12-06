@@ -12,7 +12,11 @@ num_sum(321) -> 6
 
 
 def num_sum(numb: int) -> int:
-    result = None
+    result = sum(map(int, str(numb)))   # str(numb) --> разбить введенное на цифры
+# map(int, str(input())) --> каждую цифру привести к целому
+# sum(map(int, str(numb))) --> посчитать сумму цифр
+# result = (sum(map(int, str(numb))) --> вывести сумму
+    # result = None
     return result
 
 

@@ -10,8 +10,11 @@
 
 def multiplication_table(n: int) -> list:
     # TODO тут написать код
-    result = []
-    return result
+    new_list = []
+    for i in range(11):
+        m = n * i
+        new_list.append(m)
+    return new_list
 
 
 if __name__ == '__main__':

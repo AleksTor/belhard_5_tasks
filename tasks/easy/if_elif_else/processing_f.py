@@ -27,8 +27,18 @@ def processing_f(str_with_f: str) -> Union[int, str]:
     :return: строку или индекс
     :rtype: str
     """
-    result = None
-    return result
+    fletter = str_with_f.count("f")  # Возвращает количество непересекающихся вхождений подстроки в диапазоне
+# [начало, конец] (0 и длина строки по умолчанию)
+    if fletter == 0:
+        return str_with_f.swapcase()
+    if fletter == 1:
+        return str_with_f.index("f")
+    if fletter == 2:
+        return str_with_f.rindex("f")
+    else:
+        return str_with_f[::-1]
+    # result = None
+    # return result
 
 
 if __name__ == '__main__':
